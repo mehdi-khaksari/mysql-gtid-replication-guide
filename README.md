@@ -29,7 +29,7 @@ sudo ufw allow from replica_server_ip to any port 3306
 sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf  
 ```
 ### ⚙️ Add/Modify Settings:
-```
+```ini
 [mysqld]  
 bind-address          = source_server_ip  # Allow remote connections  
 server-id             = 1                 # Must be unique  
@@ -53,7 +53,7 @@ sudo systemctl restart mysqld.service
 sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf  
 ```
 ### ⚙️ Add/Modify Settings:
-```
+```ini
 [mysqld]  
 server-id             = 2                 #  Different from source  
 log_bin               = /var/log/mysql/mysql-bin.log  
